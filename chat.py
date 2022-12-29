@@ -12,7 +12,7 @@ tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 # Set the maximum input length and prompt for the chatbot
 MAX_LENGTH = 1024
-prompt = "What is better php or python?"
+prompt = "What is better php or python? "
 
 # Pre-process the input and generate a response
 encoded_prompt = tokenizer.encode(prompt, return_tensors='pt').to(device)
