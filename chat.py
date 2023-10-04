@@ -2,13 +2,15 @@
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
+# Model
+model_name = 'gpt2'
 # Set device (e.g. CPU or GPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load the GPT model and tokenizer
-model = GPT2LMHeadModel.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained(model_name)
 model.to(device)
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
 # Set the maximum input length and prompt for the chatbot
 MAX_LENGTH = 1024
